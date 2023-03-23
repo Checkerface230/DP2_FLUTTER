@@ -9,9 +9,9 @@ class AboutUsPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "PicLeaf",
+          "LetsGrow",
           style: TextStyle(
-              color: Color.fromRGBO(102, 204, 102, 1.0),
+              color: Color.fromRGBO(12, 192, 223, 1.0),
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
@@ -27,11 +27,11 @@ class AboutUsPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
               child: const Text(
-                'About PicLeaf',
+                'About LetsGrow',
                 style: TextStyle(
                     fontSize: 30,
                     fontFamily: 'RobotoBold',
-                    color: Color.fromRGBO(102, 204, 102, 1.0)),
+                    color: Color.fromRGBO(12, 192, 223, 1.0)),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -41,7 +41,7 @@ class AboutUsPage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
               child: const Text(
-                'PicLeaf is a software that uses image processing to detect the disease that the plant may have according to the abnormalities of its leaves. It mainly focuses on fruit-bearing plants that garden lovers or the plantitos and plantitas in the Philippines tend to plant most often.',
+                'LetsGrow is a growth monitoring software that uses image processing to detect the growth rate of lettuces grown in an aquaponic system according to the pictures gathered while it is being monitored. This app can also access the parameters gathered using the placed sensors in the system.',
                 style: TextStyle(
                     fontSize: 18,
                     fontFamily: 'RobotoMedium',
@@ -59,18 +59,42 @@ class AboutUsPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: 'RobotoBold',
-                      color: Color.fromRGBO(102, 204, 102, 1.0)),
+                      color: Color.fromRGBO(12, 192, 223, 1.0)),
                   textAlign: TextAlign.center),
             ),
             Container(
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+              padding: const EdgeInsets.fromLTRB(40, 10, 20, 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Column(
                     children: <Widget>[
                       const CircleAvatar(
-                        backgroundColor: Color.fromRGBO(102, 204, 102, 1.0),
+                        backgroundColor: Color.fromRGBO(12, 192, 223, 1.0),
+                        radius: 60,
+                        child: CircleAvatar(
+                          radius: 55,
+                          backgroundImage:
+                              AssetImage('assets/images/Russel_pic.png'),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+                        child: const Text(
+                          'Ryan U. Avena',
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontFamily: 'RobotoMedium',
+                              color: Colors.black),
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      const CircleAvatar(
+                        backgroundColor: Color.fromRGBO(12, 192, 223, 1.0),
                         radius: 60,
                         child: CircleAvatar(
                           radius: 55,
@@ -91,10 +115,42 @@ class AboutUsPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
                   Column(
                     children: <Widget>[
                       const CircleAvatar(
-                        backgroundColor: Color.fromRGBO(102, 204, 102, 1.0),
+                        backgroundColor: Color.fromRGBO(12, 192, 223, 1.0),
+                        radius: 60,
+                        child: CircleAvatar(
+                          radius: 55,
+                          backgroundImage:
+                              AssetImage('assets/images/JC_pic.png'),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+                        child: const Text(
+                          'John Carlo P. Hermosa',
+                          style: TextStyle(
+                              fontSize: 13,
+                              fontFamily: 'RobotoMedium',
+                              color: Colors.black),
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      const CircleAvatar(
+                        backgroundColor: Color.fromRGBO(12, 192, 223, 1.0),
                         radius: 60,
                         child: CircleAvatar(
                           radius: 55,
@@ -117,29 +173,6 @@ class AboutUsPage extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            Column(
-              children: <Widget>[
-                const CircleAvatar(
-                  backgroundColor: Color.fromRGBO(102, 204, 102, 1.0),
-                  radius: 60,
-                  child: CircleAvatar(
-                    radius: 55,
-                    backgroundImage: AssetImage('assets/images/JC_pic.png'),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-                  child: const Text(
-                    'John Carlo P. Hermosa',
-                    style: TextStyle(
-                        fontSize: 13,
-                        fontFamily: 'RobotoMedium',
-                        color: Colors.black),
-                    textAlign: TextAlign.justify,
-                  ),
-                ),
-              ],
             ),
           ],
         ),

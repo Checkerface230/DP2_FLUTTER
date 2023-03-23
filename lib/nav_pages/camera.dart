@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_is_empty, camel_case_types
-import 'package:picleaf/widgets/plant.dart';
+import 'package:letsgrow/widgets/plant.dart';
 import 'package:flutter/material.dart';
 // Imports para sa Machine Learning Side
 import 'package:tflite/tflite.dart';
@@ -122,9 +122,9 @@ class _CameraPageState extends State<cameraPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "PicLeaf",
+          "LetsGrow",
           style: TextStyle(
-              color: Color.fromRGBO(102, 204, 102, 1.0),
+              color: Color.fromRGBO(12, 192, 223, 1.0),
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
@@ -133,194 +133,7 @@ class _CameraPageState extends State<cameraPage> {
       backgroundColor: const Color(0xffeeeeee),
       body: SingleChildScrollView(
           child: Column(
-        children: <Widget>[
-          const SizedBox(
-            height: 112,
-          ),
-          Center(
-            child: loading
-                ? SizedBox(
-                    height: 310,
-                    width: 250,
-                    child: Column(children: <Widget>[
-                      Image.asset('assets/images/logo.png')
-                    ]),
-                  )
-                : /*const Text(
-                      'Yung mga susunod dito yung ilalabas na output kapag na detect yung image') */
-                SizedBox(
-                    child: Column(children: <Widget>[
-                      SizedBox(
-                        height: 300,
-                        child: Image.file(_image),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      _output != null
-                          ? Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Text(
-                                  'Leaf Detected:\n${_output?.elementAt(0)['label'] ?? 'Object cannot be identified.'}',
-                                  style: const TextStyle(
-                                      decorationColor: Colors.black,
-                                      fontSize: 18,
-                                      fontFamily: 'RobotoMedium',
-                                      color: Colors.black,
-                                      height: 1.5),
-                                  textAlign: TextAlign.center,
-                                ),
-                                const SizedBox(height: 20),
-                                SizedBox(
-                                    child: Center(
-                                  child: TextButton(
-                                      onPressed: () {
-                                        Navigator.of(context).push(
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    SecondPage(
-                                                        plantname:
-                                                            getPlantName())));
-                                      },
-                                      child: const Text(
-                                        "More Info",
-                                        style: TextStyle(
-                                          fontSize: 25,
-                                          fontFamily: 'RobotoMedium',
-                                          shadows: [
-                                            Shadow(
-                                                color: Color.fromARGB(
-                                                    255, 75, 175, 78),
-                                                offset: Offset(0, -5))
-                                          ],
-                                          color: Colors.transparent,
-                                          decoration: TextDecoration.underline,
-                                          decorationColor:
-                                              Color.fromARGB(255, 75, 175, 78),
-                                          decorationThickness: 4,
-                                          decorationStyle:
-                                              TextDecorationStyle.solid,
-                                        ),
-                                      )),
-                                )),
-                              ],
-                            )
-                          : Container(),
-                    ]),
-                  ),
-          ),
-          const SizedBox(
-            height: 45,
-          ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            child: const Text(
-              'User Tip:\nMake sure that the picture is clear\nto maximize results.',
-              style: TextStyle(fontFamily: 'RobotoMedium', fontSize: 18),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 77,
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    topLeft: Radius.circular(20),
-                    bottomLeft: Radius.circular(0),
-                    bottomRight: Radius.circular(0)),
-                color: Color.fromARGB(255, 75, 175, 78)),
-            child: Column(children: <Widget>[
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: () {
-                      //Para sa pag open ng Camera pangkuha ng Image
-                      pickImage();
-                    },
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          width: 75,
-                          alignment: Alignment.center,
-                          padding: const EdgeInsets.symmetric(),
-                          decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 75, 175, 78),
-                              shape: BoxShape.circle),
-                          child: const Icon(
-                            Icons.camera_alt,
-                            color: Color(0xffeeeeee),
-                            size: 40,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 1,
-                        ),
-                        const Text(
-                          'Take a Photo',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 50,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      //Para sa pag open ng Gallery pangkuha ng Image
-                      pickGalleryImage();
-                    },
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          width: 75,
-                          alignment: Alignment.center,
-                          padding: const EdgeInsets.symmetric(),
-                          decoration: const BoxDecoration(
-                              color: Color.fromARGB(255, 75, 175, 78),
-                              shape: BoxShape.circle),
-                          child: const Icon(
-                            Icons.add,
-                            color: Color(0xffeeeeee),
-                            size: 40,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 1,
-                        ),
-                        const Text(
-                          'Add from Gallery',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontFamily: 'RobotoMedium',
-                              color: Color(0xffeeeeee)),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ]),
-          ),
-        ],
+        children: const <Widget>[],
       )),
     );
   }
