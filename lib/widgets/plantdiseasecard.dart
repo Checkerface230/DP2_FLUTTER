@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
-import 'package:picleaf/models/plant_display.dart';
+import 'package:letsgrow/models/plant_display.dart';
 
 class PlantCard extends StatelessWidget {
   final PlantDisplay _plantDisplay;

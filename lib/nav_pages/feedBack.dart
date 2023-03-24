@@ -45,9 +45,9 @@ class _FeedbackPageState extends State<FeedbackPage> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            "PicLeaf",
+            "LetsGrow",
             style: TextStyle(
-                color: Color.fromRGBO(102, 204, 102, 1.0),
+                color: Color.fromRGBO(12, 192, 223, 1.0),
                 fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,
@@ -69,7 +69,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                     fontSize: 30.0,
                     fontFamily: 'RobotoBold',
                     fontWeight: FontWeight.bold,
-                    color: Color.fromRGBO(102, 204, 102, 1.0)),
+                    color: Color.fromRGBO(12, 192, 223, 1.0)),
               ),
               const Text(
                 "Give us your feedback!",
@@ -157,7 +157,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       MaterialButton(
                         height: 50.0,
                         minWidth: double.infinity,
-                        color: const Color.fromRGBO(102, 204, 102, 1.0),
+                        color: const Color.fromRGBO(12, 192, 223, 1.0),
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             showDialog(
@@ -201,7 +201,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                           style: TextStyle(
                               fontSize: 30,
                               fontFamily: 'RobotoBold',
-                              color: Color.fromRGBO(102, 204, 102, 1.0)),
+                              color: Color.fromRGBO(12, 192, 223, 1.0)),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -225,7 +225,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                                         ),
 
                                         label: const Text(
-                                          'PicLeaf',
+                                          'LetsGrow',
                                           style: TextStyle(
                                               fontFamily: 'RobotoMedium',
                                               fontSize: 20),
@@ -253,7 +253,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
                                         ),
 
                                         label: const Text(
-                                          'PicLeaf Support',
+                                          'LetsGrow Support',
                                           style: TextStyle(
                                               fontFamily: 'RobotoMedium',
                                               fontSize: 20),

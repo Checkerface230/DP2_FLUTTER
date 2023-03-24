@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:picleaf/nav_pages/aboutUs.dart';
-import 'package:picleaf/nav_pages/camera.dart';
-import 'package:picleaf/nav_pages/feedBack.dart';
-import 'package:picleaf/nav_pages/home.dart';
+import 'package:letsgrow/nav_pages/aboutUs.dart';
+import 'package:letsgrow/nav_pages/camera.dart';
+import 'package:letsgrow/nav_pages/feedBack.dart';
+import 'package:letsgrow/nav_pages/home.dart';
 
 class mainPage extends StatefulWidget {
   const mainPage({super.key});
@@ -32,21 +32,21 @@ class _mainPageState extends State<mainPage> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTap,
         currentIndex: currentIndex,
-        selectedItemColor: const Color.fromRGBO(102, 204, 102, 1.0),
+        selectedItemColor: const Color.fromRGBO(12, 192, 223, 1.0),
         unselectedItemColor: const Color.fromRGBO(102, 124, 138, 1.0),
         showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.sensors,
             ),
-            label: 'Home',
+            label: 'Sensors',
           ), //Home
           BottomNavigationBarItem(
             icon: Icon(
               Icons.camera_alt,
             ),
-            label: 'Camera',
+            label: 'Growth Rate',
           ),
           BottomNavigationBarItem(
             icon: Icon(
