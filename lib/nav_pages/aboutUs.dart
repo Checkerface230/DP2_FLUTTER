@@ -75,7 +75,7 @@ class AboutUsPage extends StatelessWidget {
                         child: CircleAvatar(
                           radius: 55,
                           backgroundImage:
-                              AssetImage('assets/images/Russel_pic.png'),
+                              AssetImage('assets/images/Ryan_pic.jpg'),
                         ),
                       ),
                       Container(
